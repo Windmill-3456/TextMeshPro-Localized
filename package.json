@@ -1,0 +1,17 @@
+{
+  "name": "com.windmill.textmeshprolocalized",
+  "version": "1.0.0",
+  "displayName": "TextMeshPro Localized",
+  "description": "Create Localized TextMeshProUGUI.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {
+    "com.unity.localization": "1.3.2",
+ },
+ "keywords": [
+    "Localization"
+  ],
+  "author": {
+    "name": "Windmill"
+  }
+}
