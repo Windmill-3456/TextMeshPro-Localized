@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEditor;
 
-namespace Windmill {
+namespace WindmillEditor {
   public class EditorStyle {
     private static EditorStyle style = null;
 

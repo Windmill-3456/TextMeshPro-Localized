@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEditor.Events;
 using UnityEngine.Events;
 using UnityEngine.Localization.Components;
+using Windmill;
 
-namespace Windmill.Editor {
+namespace WindmillEditor {
   public class TextMeshProLocalization {
 
     [MenuItem("GameObject/UI/Text - TextMeshPro (Localized)", false, 2001)]

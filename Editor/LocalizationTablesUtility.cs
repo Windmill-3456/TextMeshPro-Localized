@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditor.Localization;
 using UnityEngine;
 
-namespace Windmill.Editor {
+namespace WindmillEditor {
   public class LocalizationTablesUtility : EditorWindow {
 
     private Vector2 scrollPos = Vector2.zero;
