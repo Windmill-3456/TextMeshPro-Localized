@@ -6,9 +6,9 @@
   "unity": "2019.1",
   "unityRelease": "0b5",
   "dependencies": {
-    "com.unity.localization": "1.3.2",
- },
- "keywords": [
+    "com.unity.localization": "1.3.2"
+  },
+  "keywords": [
     "Localization"
   ],
   "author": {
