@@ -10,7 +10,7 @@ using Windmill;
 namespace WindmillEditor {
   public class TextMeshProLocalization {
 
-    [MenuItem("GameObject/UI/Text - TextMeshPro (Localized)", false, 2001)]
+    [MenuItem("GameObject/UI/Text - TextMeshPro (Localized)", false, 2002)]
     private static void Create(MenuCommand command) {
       var gameObject = new GameObject("Text (Localized)");
       GameObjectUtility.SetParentAndAlign(gameObject, command.context as GameObject);
