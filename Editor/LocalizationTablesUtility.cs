@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.Localization;
 using UnityEngine;
 
 namespace WindmillEditor {
@@ -34,7 +33,7 @@ namespace WindmillEditor {
 
         using (new EditorGUILayout.VerticalScope(style.area)) {
 
-          foreach (var collection in LocalizationEditorSettings.GetStringTableCollections()) {
+          foreach (var collection in UnityEditor.Localization.LocalizationEditorSettings.GetStringTableCollections()) {
             tableCollection.Add(collection.name);
           }
 
@@ -43,7 +42,7 @@ namespace WindmillEditor {
 
           if (GUI.Button(new Rect(Screen.width - 120f, 105f, 100.0f, 20.0f), "Setup")) {
             if (EditorUtility.DisplayDialog("Smart Settings", "Set all Smart settings for " + tableCollection[tableCollectionIndex] + " in the Localization Tables to " + (isSmart ? "Enable" : "Disable") + ".", "OK", "Cancel")) {
-              foreach (var table in LocalizationEditorSettings.GetStringTableCollection(tableCollection[tableCollectionIndex]).StringTables) {
+              foreach (var table in UnityEditor.Localization.LocalizationEditorSettings.GetStringTableCollection(tableCollection[tableCollectionIndex]).StringTables) {
                 foreach (var element in table) {
                   element.Value.IsSmart = isSmart;
                 }
