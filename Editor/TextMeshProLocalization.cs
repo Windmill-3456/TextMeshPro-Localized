@@ -7,8 +7,8 @@ using Windmill;
 namespace WindmillEditor {
   public class TextMeshProLocalization {
 
-    [MenuItem("GameObject/UI/Text - TextMeshPro (Localized)", false, 2001)]
-    private static void Create(MenuCommand command) {
+    [UnityEditor.MenuItem("GameObject/UI/Text - TextMeshPro (Localized)", false, 2001)]
+    private static void Create(UnityEditor.MenuCommand command) {
       var gameObject = new GameObject("Text (Localized)");
       GameObjectUtility.SetParentAndAlign(gameObject, command.context as GameObject);
       Undo.RegisterCreatedObjectUndo(gameObject, "Text (Localized)");
