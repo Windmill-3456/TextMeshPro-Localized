@@ -3,14 +3,14 @@ using UnityEditor;
 using UnityEngine;
 
 namespace WindmillEditor {
-  public class LocalizationTablesUtility : UnityEditor.EditorWindow {
+  public class LocalizationTablesUtility : EditorWindow {
 
     private Vector2 scrollPos = Vector2.zero;
     private int tableCollectionIndex = 0;
     private bool isSmart = false;
     private List<string> tableCollection = new List<string>();
 
-    [UnityEditor.MenuItem("Tools/Windmill/Localization Tables Utility")]
+    [MenuItem("Tools/Windmill/Localization Tables Utility")]
     static void Draw() {
       var window = (LocalizationTablesUtility)EditorWindow.GetWindow(typeof(LocalizationTablesUtility));
       window.minSize = new Vector2(500f, 150f);
