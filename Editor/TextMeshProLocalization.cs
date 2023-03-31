@@ -2,9 +2,6 @@ using System;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
-using UnityEditor.Events;
-using UnityEngine.Events;
-using UnityEngine.Localization.Components;
 using Windmill;
 
 namespace WindmillEditor {
@@ -21,23 +18,23 @@ namespace WindmillEditor {
       var textMeshProUGUI = gameObject.GetComponent<TextMeshProUGUI>();
       textMeshProUGUI.text = "New Text";
 
-      gameObject.AddComponent<LocalizeStringEvent>();
-      var localizeStringEvent = gameObject.GetComponent<LocalizeStringEvent>();
+      gameObject.AddComponent<UnityEngine.Localization.Components.LocalizeStringEvent>();
+      var localizeStringEvent = gameObject.GetComponent<UnityEngine.Localization.Components.LocalizeStringEvent>();
 
       var call = Delegate.CreateDelegate(
-        type: typeof(UnityAction<string>),
+        type: typeof(UnityEngine.Events.UnityAction<string>),
         firstArgument: textMeshProUGUI,
         method: textMeshProUGUI.GetType().GetProperty("text").GetSetMethod()
-      ) as UnityAction<string>;
+      ) as UnityEngine.Events.UnityAction<string>;
 
-      UnityEventTools.AddPersistentListener<string>(
+      UnityEditor.Events.UnityEventTools.AddPersistentListener<string>(
         unityEvent: localizeStringEvent.OnUpdateString,
         call: call
       );
 
       localizeStringEvent.OnUpdateString.SetPersistentListenerState(
         index: 0,
-        state: UnityEventCallState.RuntimeOnly
+        state: UnityEngine.Events.UnityEventCallState.RuntimeOnly
       );
 
       gameObject.AddComponent<LocalizeStringChanger>();
